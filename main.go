@@ -15,6 +15,6 @@ func main(){
 		home := os.Getenv("JAVA_HOME")
 		writer.Write([]byte(home))
 	})
-	fmt.Println("working at 80")
+	fmt.Println("working at 8080")
 	http.ListenAndServe("127.0.0.1:8080",nil)
 }
