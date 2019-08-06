@@ -8,11 +8,11 @@ import (
 
 func main(){
 	http.HandleFunc("/index", func(writer http.ResponseWriter, request *http.Request) {
-		s := "<p>it is index</p>"
+		s := "<h1 >it is index</h2>"
 		writer.Write([]byte(s))
 	})
 	http.HandleFunc("/env", func(writer http.ResponseWriter, request *http.Request) {
-		home := os.Getenv("JAVA_HOME")
+		home := os.Getenv("env")
 		writer.Write([]byte(home))
 	})
 	http.HandleFunc("/healthz", func(writer http.ResponseWriter, request *http.Request) {
