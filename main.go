@@ -15,6 +15,12 @@ func main(){
 		home := os.Getenv("JAVA_HOME")
 		writer.Write([]byte(home))
 	})
+	http.HandleFunc("/healthz", func(writer http.ResponseWriter, request *http.Request) {
+		fmt.Println("I am ok")
+	})
+	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
+		fmt.Println("I am ok")
+	})
 	fmt.Println("working at 8080")
 	http.ListenAndServe("0.0.0.0:8080",nil)
 }
