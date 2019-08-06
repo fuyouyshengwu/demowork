@@ -8,7 +8,7 @@ import (
 
 func main(){
 	http.HandleFunc("/index", func(writer http.ResponseWriter, request *http.Request) {
-		s := "<h1 >it is v1</h2>"
+		s := "<h1 >it is v2</h2>"
 		writer.Write([]byte(s))
 	})
 	http.HandleFunc("/env", func(writer http.ResponseWriter, request *http.Request) {
