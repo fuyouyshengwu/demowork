@@ -16,5 +16,5 @@ func main(){
 		writer.Write([]byte(home))
 	})
 	fmt.Println("working at 80")
-	http.ListenAndServe("127.0.0.1:80",nil)
+	http.ListenAndServe("127.0.0.1:8080",nil)
 }
