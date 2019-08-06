@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 	"os"
+	"fmt"
 )
 
 func main(){
@@ -14,5 +15,6 @@ func main(){
 		home := os.Getenv("JAVA_HOME")
 		writer.Write([]byte(home))
 	})
+	fmt.Println("working at 80")
 	http.ListenAndServe("127.0.0.1:80",nil)
 }
