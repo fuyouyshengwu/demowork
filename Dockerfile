@@ -1,4 +1,4 @@
-FROM registry.icp.com:5000/cks/cks-ubuntu:test
+FROM registry.inspurcloud.cn/picp_inspurtest14/cus-go:test
 ADD main /demo/work
 RUN chmod +x /demo/work
 EXPOSE 80
